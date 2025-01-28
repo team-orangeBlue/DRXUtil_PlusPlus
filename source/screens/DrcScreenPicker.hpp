@@ -22,6 +22,7 @@ private:
         MENU_ID_DUMP_EEPROM,
         MENU_ID_DRC_PAIR,
         MENU_ID_ENABLE_DKMENU,
+        MENU_ID_ENABLE_TESTMODE,
         MENU_ID_DRC_RESET,
 
         MENU_ID_MIN = MENU_ID_SET_REGION,

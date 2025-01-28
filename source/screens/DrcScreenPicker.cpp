@@ -3,6 +3,7 @@
 #include "EepromScreen.hpp"
 #include "PairScreen.hpp"
 #include "EnableDKMenuScreen.hpp"
+#include "TestMode.hpp"
 #include "FormatScreen.hpp"
 #include "Gfx.hpp"
 
@@ -14,6 +15,7 @@ DrcScreenPicker::DrcScreenPicker()
         { MENU_ID_DUMP_EEPROM,      { 0xf08b, "Dump EEPROMs" }},
         { MENU_ID_DRC_PAIR,         { 0xf0c1, "Pair DRC..." }},
         { MENU_ID_ENABLE_DKMENU,    { 0xf188, "Enable DK Menu" }},
+        { MENU_ID_ENABLE_TESTMODE,  { 0xf0c3, "Enable testmode" }},
         { MENU_ID_DRC_RESET,        { 0xf079, "Reset DRC" }},
     })
 {
@@ -81,6 +83,9 @@ bool DrcScreenPicker::Update(VPADStatus& input)
             break;
         case MENU_ID_ENABLE_DKMENU:
             mSubscreen = std::make_unique<EnableDKMenuScreen>();
+            break;
+        case MENU_ID_ENABLE_TESTMODE:
+            mSubscreen = std::make_unique<EnableTestMode>();
             break;
         case MENU_ID_DRC_RESET:
             mSubscreen = std::make_unique<FormatScreen>();

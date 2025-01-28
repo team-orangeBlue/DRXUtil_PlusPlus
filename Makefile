@@ -13,10 +13,10 @@ TOPDIR ?= $(CURDIR)
 # APP_SHORTNAME sets the short name of the application
 # APP_AUTHOR sets the author of the application
 #-------------------------------------------------------------------------------
-APP_NAME		:=	DRXUtil
-APP_SHORTNAME		:=	DRXUtil
-APP_AUTHOR		:=	GaryOderNichts
-APP_VERSION		:=	1.2
+APP_NAME		:=	DRXUtil-PlusPlus
+APP_SHORTNAME		:=	DRXUtil++
+APP_AUTHOR		:=	TeamOB
+APP_VERSION		:=	1.7ts
 
 include $(DEVKITPRO)/wut/share/wut_rules
 
